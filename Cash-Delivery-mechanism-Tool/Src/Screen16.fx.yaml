@@ -1,0 +1,129 @@
+Screen16 As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Label1_8 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =110
+        Size: =20
+        Text: ="Ease of Implementation"
+        Width: =640
+        ZIndex: =1
+
+    Label2_45 As label:
+        DisplayMode: =DisplayMode.View
+        Height: =158
+        Size: =21
+        Text: ="Q46. Can the FSP adapt to changes in programme design including variations in beneficiary numbers and amount transferred in a reasonable timeframe??"
+        Width: =600
+        X: =20
+        Y: =215
+        ZIndex: =2
+
+    Radio1_45 As radio:
+        Align: =Align.Center
+        Default: =""
+        Height: =94
+        Items: =["Yes","No"]
+        Layout: =Layout.Horizontal
+        LineHeight: =
+        OnChange: =true
+        OnSelect: =
+        PressedColor: |
+            =Self.Color
+        RadioSize: =60
+        Reset: =true
+        Size: =21
+        Width: =505
+        X: =20
+        Y: =390
+        ZIndex: =3
+
+    total_13 As label:
+        BorderColor: =RGBA(255, 0, 0, 1)
+        BorderThickness: =1
+        Color: =RGBA(255, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(241, 244, 249, 1)
+        FocusedBorderThickness: =1
+        Height: =59
+        Size: =21
+        Text: =(If("Yes" in Radio1_45.Selected.Value, 2, 0)) + (If("Yes" in Radio1_46.Selected.Value, 3, 0))
+        Visible: =false
+        Width: =120
+        X: =240
+        Y: =860
+        ZIndex: =8
+
+    Label2_46 As label:
+        DisplayMode: =DisplayMode.View
+        Height: =158
+        Size: =21
+        Text: ="Q47. Does the maximum cash handling capacity of the service meet programme requirements?"
+        Width: =600
+        X: =20
+        Y: =495
+        ZIndex: =10
+
+    Radio1_46 As radio:
+        Align: =Align.Center
+        Default: =""
+        Height: =94
+        Items: =["Yes","No"]
+        Layout: =Layout.Horizontal
+        OnChange: =true    
+        OnSelect: =
+        PressedColor: |
+            =Self.Color
+        RadioSize: =60
+        Reset: =true
+        Size: =21
+        Width: =505
+        X: =20
+        Y: =670
+        ZIndex: =11
+
+    Button2_32 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =70
+        OnSelect: =Navigate(Screen15, ScreenTransition.Fade)
+        Size: =24
+        Text: ="Previous"
+        Width: =180
+        X: =36
+        Y: =1016
+        ZIndex: =12
+
+    Button2_33 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =70
+        OnSelect: |-
+            =If(
+                !IsBlank(Radio1_45) && !IsBlank(Radio1_46),
+                Navigate(
+                    Screen17,
+                    ScreenTransition.Fade
+                )
+            )
+        Size: =24
+        Text: ="Next"
+        Width: =180
+        X: =400
+        Y: =1016
+        ZIndex: =13
+
+    Label7_13 As label:
+        Color: =RGBA(128, 128, 128, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Flexibility and Scalability"
+        Width: =560
+        X: =20
+        Y: =110
+        ZIndex: =14
+

@@ -1,0 +1,238 @@
+"Screen4 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar2_1 As rectangle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =110
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName2_1 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =20
+        Text: ="Financial Service Provider (FSP) Capacity"
+        Width: =Parent.Width
+        Y: =20
+        ZIndex: =2
+
+    Canvas2_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =1026
+        Width: =Parent.Width
+        Y: =RectQuickActionBar2_1.Y + RectQuickActionBar2_1.Height
+        ZIndex: =3
+
+        DataCard6_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1390
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label7_2 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Speed"
+                Width: =560
+                X: =21
+                ZIndex: =1
+
+            Label2_17 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q14. Can the FSP finalise contract negotiation within a timeframe consistent with programme needs?"
+                Width: =600
+                X: =21
+                Y: =100
+                ZIndex: =2
+
+            Radio1_17 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =239
+                ZIndex: =3
+
+            Label2_18 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q15. Can the cash transfer process be completed within a timeframe consistent with programme needs? "
+                Width: =600
+                X: =21
+                Y: =340
+                ZIndex: =4
+
+            Radio1_18 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =472
+                ZIndex: =5
+
+            Label2_19 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q16. Does the FSP already have the required technology/liquidity?"
+                Width: =600
+                X: =21
+                Y: =554
+                ZIndex: =6
+
+            Radio1_19 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =686
+                ZIndex: =7
+
+            Radio1_20 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =908
+                ZIndex: =9
+
+            Button2_8 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: =Navigate(Screen3, ScreenTransition.Fade)
+                Size: =24
+                Text: ="Previous"
+                Width: =165
+                X: =35
+                Y: =1288
+                ZIndex: =10
+
+            Button2_9 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: |-
+                    =If(
+                        !IsBlank(Radio1_17) && !IsBlank(Radio1_18)
+                         && !IsBlank(Radio1_19) && !IsBlank(Radio1_21),
+                        Navigate(
+                            Screen5,
+                            ScreenTransition.Fade
+                        )
+                    )
+                Size: =24
+                Text: ="Next"
+                Width: =171
+                X: =425
+                Y: =1288
+                ZIndex: =11
+
+            total_5 As label:
+                BorderColor: =RGBA(255, 0, 0, 1)
+                BorderThickness: =1
+                Color: =RGBA(255, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(241, 244, 249, 1)
+                FocusedBorderThickness: =1
+                Height: =59
+                OnSelect: |
+                    =
+                Size: =21
+                Text: =(If("Yes" in Radio1_17.Selected.Value, 2, 0))+(If("Yes" in Radio1_18.Selected.Value, 2, 0))+(If("Yes" in Radio1_19.Selected.Value, 2, 0))+(If("Yes" in Radio1_20.Selected.Value, 2, 0))+ (If("Yes" in Radio1_21.Selected.Value, 3, 0))
+                Visible: =false
+                Width: =120
+                X: =251
+                Y: =1229
+                ZIndex: =12
+
+            Label2_21 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q18. Can all service delivery related procurement be done by the FSP within a timeframe consistent with programme needs?"
+                Width: =586
+                X: =21
+                Y: =1015
+                ZIndex: =13
+
+            Radio1_21 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =1147
+                ZIndex: =14
+
+            Label2_20 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q17. If not, can the FSP acquire technology/liquidity within a timeframe consistent with programme needs?"
+                Width: =600
+                X: =21
+                Y: =784
+                ZIndex: =15
+

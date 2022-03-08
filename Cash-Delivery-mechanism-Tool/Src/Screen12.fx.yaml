@@ -1,0 +1,210 @@
+"Screen12 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar2_6 As rectangle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =110
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName2_6 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =20
+        Text: ="Cost-Effeciency"
+        Width: =Parent.Width
+        Y: =20
+        ZIndex: =2
+
+    Canvas2_6 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar2_6.Y + RectQuickActionBar2_6.Height
+        ZIndex: =3
+
+        DataCard6_6 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1154
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label7_10 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Cost to the Organization"
+                Width: =560
+                X: =21
+                ZIndex: =1
+
+            Label2_37 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q36. Have set-up fees been calculated in the commercial offer presented by the FSP?"
+                Width: =600
+                X: =21
+                Y: =100
+                ZIndex: =2
+
+            Radio1_37 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =239
+                ZIndex: =3
+
+            Label2_38 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q37. Are the fees for each transfer and as an aggregate in line with budget previsions? "
+                Width: =600
+                X: =21
+                Y: =340
+                ZIndex: =4
+
+            Radio1_38 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =472
+                ZIndex: =5
+
+            Label2_39 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q38. Have all the fees been presented clearly (i.e. no hidden fees)?"
+                Width: =600
+                X: =21
+                Y: =554
+                ZIndex: =6
+
+            Radio1_39 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =686
+                ZIndex: =7
+
+            Label2_40 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q39. Is the overall pricing of the service in line with budget?"
+                Width: =586
+                X: =21
+                Y: =776
+                ZIndex: =8
+
+            Radio1_40 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =908
+                ZIndex: =9
+
+            Button2_24 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: =Navigate(Screen11, ScreenTransition.Fade)
+                Size: =24
+                Text: ="Previous"
+                Width: =165
+                X: =33
+                Y: =1073
+                ZIndex: =10
+
+            Button2_25 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: |-
+                    =If(
+                        !IsBlank(Radio1_37) && !IsBlank(Radio1_38)
+                         && !IsBlank(Radio1_39) && !IsBlank(Radio1_40),
+                        Navigate(
+                            Screen13,
+                            ScreenTransition.Fade
+                        )
+                    )
+                Size: =24
+                Text: ="Next"
+                Width: =171
+                X: =423
+                Y: =1073
+                ZIndex: =11
+
+            total_10 As label:
+                BorderColor: =RGBA(255, 0, 0, 1)
+                BorderThickness: =1
+                Color: =RGBA(255, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(241, 244, 249, 1)
+                FocusedBorderThickness: =1
+                Height: =59
+                OnSelect: |
+                    =
+                Size: =21
+                Text: =(If("Yes" in Radio1_37.Selected.Value, 1, 0))+(If("Yes" in Radio1_38.Selected.Value, 2, 0))+(If("Yes" in Radio1_39.Selected.Value, 2, 0))+(If("Yes" in Radio1_40.Selected.Value, 3, 0))
+                Visible: =false
+                Width: =120
+                X: =249
+                Y: =1014
+                ZIndex: =12
+

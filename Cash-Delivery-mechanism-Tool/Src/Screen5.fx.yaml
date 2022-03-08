@@ -1,0 +1,239 @@
+"Screen5 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar2_2 As rectangle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =110
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName2_2 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =20
+        Text: ="Financial Service Provider (FSP) Capacity"
+        Width: =Parent.Width
+        Y: =20
+        ZIndex: =2
+
+    Canvas2_2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =1026
+        Width: =640
+        Y: =RectQuickActionBar2_2.Y + RectQuickActionBar2_2.Height
+        ZIndex: =3
+
+        DataCard6_2 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1406
+            Width: =652
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label7_3 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Resilience"
+                Width: =560
+                X: =21
+                ZIndex: =1
+
+            Label2_22 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q19. Does the FSP have a disaster preparedness team and a business continuity plan?"
+                Width: =600
+                X: =21
+                Y: =100
+                ZIndex: =2
+
+            Radio1_22 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =239
+                ZIndex: =3
+
+            Label2_23 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q20. Is the business continuity plan ISO 22301certified?"
+                Width: =600
+                X: =21
+                Y: =340
+                ZIndex: =4
+
+            Radio1_23 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =472
+                ZIndex: =5
+
+            Label2_24 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =183
+                Size: =21
+                Text: ="Q21. For MNOs, is the maximum recovery time for voice calls, SMS, internet consistent with programme needs?  For other FSPs, are key performance indicators consistent with programme needs?"
+                Width: =600
+                X: =21
+                Y: =554
+                ZIndex: =6
+
+            Radio1_24 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =737
+                ZIndex: =7
+
+            Radio1_25 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =959
+                ZIndex: =9
+
+            Button2_10 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: =Navigate(Screen4, ScreenTransition.Fade)
+                Size: =24
+                Text: ="Previous"
+                Width: =165
+                X: =35
+                Y: =1339
+                ZIndex: =10
+
+            Button2_11 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: |-
+                    =If(
+                        !IsBlank(Radio1_22) && !IsBlank(Radio1_23)
+                         && !IsBlank(Radio1_24) && !IsBlank(Radio1_25)
+                          && !IsBlank(Radio1_26),
+                        Navigate(
+                            Screen6,
+                            ScreenTransition.Fade
+                        )
+                    )
+                Size: =24
+                Text: ="Next"
+                Width: =171
+                X: =425
+                Y: =1339
+                ZIndex: =11
+
+            total_6 As label:
+                BorderColor: =RGBA(255, 0, 0, 1)
+                BorderThickness: =1
+                Color: =RGBA(255, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(241, 244, 249, 1)
+                FocusedBorderThickness: =1
+                Height: =59
+                OnSelect: |
+                    =
+                Size: =21
+                Text: =(If("Yes" in Radio1_22.Selected.Value, 2, 0))+(If("Yes" in Radio1_23.Selected.Value, 2, 0))+(If("Yes" in Radio1_24.Selected.Value, 2, 0))+(If("Yes" in Radio1_25.Selected.Value, 2, 0))+ (If("Yes" in Radio1_26.Selected.Value, 1, 0))
+                Visible: =false
+                Width: =120
+                X: =251
+                Y: =1280
+                ZIndex: =12
+
+            Label2_26 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q23. Does the FSP have a plan for prepositioning of assets and securing additional capacity in case of need?"
+                Width: =586
+                X: =21
+                Y: =1066
+                ZIndex: =13
+
+            Radio1_26 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =1198
+                ZIndex: =14
+
+            Label2_25 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q22. Do the priorities of the FSP for restoring service (geographical area, service quality) meet programme needs?"
+                Width: =600
+                X: =21
+                Y: =835
+                ZIndex: =15
+

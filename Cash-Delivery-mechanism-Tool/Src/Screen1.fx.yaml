@@ -1,0 +1,124 @@
+Screen1 As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =110
+        Size: =20
+        Text: ="User Registration and Experience"
+        Width: =640
+        ZIndex: =1
+
+    Label2 As label:
+        DisplayMode: =DisplayMode.View
+        Height: =158
+        Size: =21
+        Text: ="Q1. Do persons of concern have/can be provided with the necessary documents to meet KYC requirements and register to the service?"
+        Width: =600
+        X: =20
+        Y: =215
+        ZIndex: =2
+
+    Radio1 As radio:
+        Align: =Align.Center
+        Default: =""
+        Height: =94
+        Items: =["Yes","No"]
+        Layout: =Layout.Horizontal
+        LineHeight: =
+        OnChange: =true
+        OnSelect: =
+        PressedColor: |
+            =Self.Color
+        RadioSize: =60
+        Reset: =true
+        Size: =21
+        Width: =505
+        X: =20
+        Y: =390
+        ZIndex: =3
+
+    total_1 As label:
+        BorderColor: =RGBA(255, 0, 0, 1)
+        BorderThickness: =1
+        Color: =RGBA(255, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(241, 244, 249, 1)
+        FocusedBorderThickness: =1
+        Height: =59
+        Size: =21
+        Text: =(If("Yes" in Radio1.Selected.Value, 3, 0)) + (If("Yes" in Radio1_1.Selected.Value, 1, 0))
+        Visible: =false
+        Width: =120
+        X: =240
+        Y: =860
+        ZIndex: =8
+
+    Label2_1 As label:
+        DisplayMode: =DisplayMode.View
+        Height: =175
+        LineHeight: =
+        Size: =21
+        Text: ="Q2. If no, can persons of concern be provided with the necessary documents to meet KYC requirements by the organisation/Government and register to the service?"
+        Width: =600
+        X: =20
+        Y: =495
+        ZIndex: =10
+
+    Radio1_1 As radio:
+        Align: =Align.Center
+        Default: =""
+        Height: =94
+        Items: =["Yes","No"]
+        Layout: =Layout.Horizontal
+        LineHeight: =If (Radio1.Selected.Value = "No", Radio1_1.DisplayMode.Edit ,DisplayMode.Disabled)
+        OnChange: =true    
+        OnSelect: =
+        PressedColor: |
+            =Self.Color
+        RadioSize: =60
+        Reset: =true
+        Size: =21
+        Width: =505
+        X: =20
+        Y: =703
+        ZIndex: =11
+
+    Button2 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =70
+        OnSelect: =Navigate(Screen_0, ScreenTransition.Fade)
+        Size: =24
+        Text: ="Previous"
+        Width: =180
+        X: =36
+        Y: =1016
+        ZIndex: =12
+
+    Button2_1 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =70
+        OnSelect: =If((!IsBlank(Radio1)),Navigate(Screen2,ScreenTransition.Fade))
+        Size: =24
+        Text: ="Next"
+        Width: =180
+        X: =400
+        Y: =1016
+        ZIndex: =13
+
+    Label7_4 As label:
+        Color: =RGBA(128, 128, 128, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Registration"
+        Width: =560
+        X: =20
+        Y: =110
+        ZIndex: =14
+

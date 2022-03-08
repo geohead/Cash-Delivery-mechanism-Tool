@@ -1,0 +1,65 @@
+Screen22 As screen:
+
+    Label8_2 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: |-
+            ="Score out of 16:"
+        Width: =242
+        X: =51
+        Y: =359
+        ZIndex: =1
+
+    Label8_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(54, 176, 75, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: |
+            =total_1+ total_3
+        Width: =124
+        X: =336
+        Y: =359
+        ZIndex: =2
+
+    Label1_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =110
+        Size: =20
+        Text: ="User Registration and Experience"
+        Width: =640
+        ZIndex: =3
+
+    Button2_14 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =51
+        OnSelect: =Navigate(Screen2, ScreenTransition.Fade)
+        Size: =24
+        Text: ="Previous"
+        Width: =165
+        X: =39
+        Y: =1021
+        ZIndex: =4
+
+    Button2_15 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =51
+        OnSelect: =Navigate(Screen3, ScreenTransition.Fade)
+        Size: =24
+        Text: ="Next"
+        Width: =171
+        X: =429
+        Y: =1021
+        ZIndex: =5
+

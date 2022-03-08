@@ -1,0 +1,296 @@
+"Screen2 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar1 As rectangle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =111
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1787
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label2_7 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =112
+                Size: =21
+                Text: ="Q3. Do persons of concern have past experience with the service? "
+                Width: =585
+                X: =32
+                Y: =74
+                ZIndex: =1
+
+            Radio1_7 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =94
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =32
+                Y: =186
+                ZIndex: =2
+
+            Label2_8 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =117
+                Size: =21
+                Text: ="Q4. Will the service be easily understood and used by persons of concern?"
+                Width: =569
+                X: =32
+                Y: =294
+                ZIndex: =3
+
+            Radio1_8 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =84
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =40
+                Y: =411
+                ZIndex: =4
+
+            Label2_9 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =118
+                Size: =21
+                Text: ="Q5.  Can the FSP provide training to persons of concern free of charge?"
+                Width: =580
+                X: =32
+                Y: =508
+                ZIndex: =5
+
+            Radio1_9 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =84
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =32
+                Y: =639
+                ZIndex: =6
+
+            Label2_10 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =118
+                Size: =21
+                Text: ="Q6. Are transaction points easily accessible by most persons of concern?"
+                Width: =569
+                X: =32
+                Y: =742
+                ZIndex: =7
+
+            Radio1_10 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =84
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =32
+                Y: =876
+                ZIndex: =8
+
+            Label2_11 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =118
+                Size: =21
+                Text: ="Q7. Are the transaction points in safe locations/have safe opening hours?"
+                Width: =580
+                X: =32
+                Y: =972
+                ZIndex: =9
+
+            Radio1_11 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =84
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =32
+                Y: =1099
+                ZIndex: =10
+
+            Label2_12 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =118
+                Size: =21
+                Text: ="Q8. Can alternative solutions be put in place for those who cannot physically access the service?"
+                Width: =580
+                X: =32
+                Y: =1192
+                ZIndex: =11
+
+            Radio1_12 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =84
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =32
+                Y: =1328
+                ZIndex: =12
+
+            Label2_13 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =118
+                Size: =21
+                Text: ="Q9. Can the FSP guarantee the provision of quality customer service (including a helpline) to persons of concern?"
+                Width: =580
+                X: =32
+                Y: =1423
+                ZIndex: =13
+
+            Radio1_13 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =84
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =32
+                Y: =1567
+                ZIndex: =14
+
+            Button2_4 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: =Navigate(Screen1, ScreenTransition.Fade)
+                Size: =24
+                Text: ="Previous"
+                Tooltip: =
+                Width: =165
+                X: =40
+                Y: =1725
+                ZIndex: =15
+
+            total_3 As label:
+                BorderColor: =RGBA(255, 0, 0, 1)
+                BorderThickness: =1
+                Color: =RGBA(255, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(241, 244, 249, 1)
+                FocusedBorderThickness: =1
+                Height: =59
+                Size: =21
+                Text: =(If("Yes" in Radio1_7.Selected.Value, 2, 0))+ (If("Yes" in Radio1_8.Selected.Value, 1, 0))+(If("Yes" in Radio1_9.Selected.Value, 1, 0))+ (If("Yes" in Radio1_10.Selected.Value, 3, 0)) + (If("Yes" in Radio1_11.Selected.Value, 3, 0)) + (If("Yes" in Radio1_12.Selected.Value, 1, 0))+ (If("Yes" in Radio1_13.Selected.Value, 2, 0))
+                Visible: =false
+                Width: =120
+                X: =256
+                Y: =1666
+                ZIndex: =17
+
+            Label7_5 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Experience"
+                Width: =560
+                X: =32
+                Y: =4
+                ZIndex: =18
+
+            Button2_5 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: |-
+                    =If(
+                        !IsBlank(Radio1_7) && !IsBlank(Radio1_8)
+                        && !IsBlank(Radio1_9) && !IsBlank(Radio1_10)
+                        && !IsBlank(Radio1_11) && !IsBlank(Radio1_12)
+                        && !IsBlank(Radio1_13) ,
+                        Navigate(
+                            Screen22,
+                            ScreenTransition.Fade
+                        )
+                    )
+                Size: =24
+                Text: ="Next"
+                Tooltip: =
+                Width: =165
+                X: =380
+                Y: =1725
+                ZIndex: =19
+
+    Label4_2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        FontWeight: =FontWeight.Bold
+        Height: =55
+        Size: =21
+        Text: ="User Registration and Experience"
+        Width: =560
+        X: =40
+        Y: =28
+        ZIndex: =4
+

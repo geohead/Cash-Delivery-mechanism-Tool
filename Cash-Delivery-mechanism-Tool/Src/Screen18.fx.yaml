@@ -1,0 +1,119 @@
+Screen18 As screen:
+
+    Label8_8 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        FontWeight: =FontWeight.Bold
+        Height: =150
+        Size: =21
+        Text: |-
+            ="Ease of Implementation
+            
+            Score out of 11:"
+        Width: =285
+        X: =39
+        Y: =148
+        ZIndex: =1
+
+    Label8_9 As label:
+        Align: =Align.Center
+        Color: =RGBA(54, 176, 75, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: |-
+            =
+            total_12 + total_13+ total_14
+        Width: =124
+        X: =426
+        Y: =218
+        ZIndex: =2
+
+    Label1_10 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =110
+        Size: =20
+        Text: ="Cash Delivery Mechanism Assessment Tool"
+        Width: =640
+        ZIndex: =3
+
+    Button2_36 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =51
+        OnSelect: =Navigate(Screen17, ScreenTransition.Fade)
+        Size: =24
+        Text: ="Previous"
+        Width: =165
+        X: =39
+        Y: =1021
+        ZIndex: =4
+
+    Label8_10 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: |-
+            ="Grand Total:"
+        Width: =242
+        X: =58
+        Y: =368
+        ZIndex: =5
+
+    Label8_12 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: ="VERDICT"
+        Width: =144
+        X: =248
+        Y: =531
+        ZIndex: =7
+
+    Label8_11 As label:
+        Align: =Align.Center
+        Color: =RGBA(54, 176, 75, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: |-
+            =
+            Label8_9 + Label8_7 + Label8_5 + Label8_1 + Label8_3 
+        Width: =124
+        X: =426
+        Y: =368
+        ZIndex: =8
+
+    Label8_14 As label:
+        Align: =Align.Center
+        Color: =RGBA(54, 176, 75, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =106
+        Size: =21
+        Text: |-
+            =If (
+                Value(Label8_11.Text) < 50,
+                "Definitely No",
+                Value(Label8_11.Text) >= 50 && Value(Label8_11.Text) < 70,
+                "Yes, conditional on a more in-depth assessment",
+                "Definitely Yes"
+            )
+        Width: =359
+        X: =140
+        Y: =658
+        ZIndex: =10
+

@@ -1,0 +1,66 @@
+Screen6 As screen:
+
+    Label8 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: |-
+            ="Score out of 26:"
+        Width: =242
+        X: =51
+        Y: =359
+        ZIndex: =1
+
+    Label8_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(54, 176, 75, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(237, 237, 237, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =68
+        Size: =21
+        Text: |-
+            =
+            total_4+total_5+ total_6
+        Width: =124
+        X: =336
+        Y: =359
+        ZIndex: =2
+
+    Label1_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =110
+        Size: =20
+        Text: ="Financial Service Provider (FSP) Capacity"
+        Width: =640
+        ZIndex: =3
+
+    Button2_12 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =51
+        OnSelect: =Navigate(Screen5, ScreenTransition.Fade)
+        Size: =24
+        Text: ="Previous"
+        Width: =165
+        X: =39
+        Y: =1021
+        ZIndex: =4
+
+    Button2_13 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =51
+        OnSelect: =Navigate(Screen7, ScreenTransition.Fade)
+        Size: =24
+        Text: ="Next"
+        Width: =171
+        X: =429
+        Y: =1021
+        ZIndex: =5
+

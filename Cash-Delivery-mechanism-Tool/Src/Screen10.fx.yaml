@@ -1,0 +1,182 @@
+"Screen10 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar2_5 As rectangle:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =110
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName2_5 As label:
+        Align: =Align.Center
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =20
+        Text: ="Information Security and Control"
+        Width: =Parent.Width
+        Y: =20
+        ZIndex: =2
+
+    Canvas2_5 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar2_5.Y + RectQuickActionBar2_5.Height
+        ZIndex: =3
+
+        DataCard6_5 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =966
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label7_9 As label:
+                Color: =RGBA(128, 128, 128, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =21
+                Text: ="Compliance with Internal Policies"
+                Width: =560
+                X: =21
+                ZIndex: =1
+
+            Label2_34 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q33. Do the provisions to manage traceability of funds meet the organization's requirements?"
+                Width: =600
+                X: =21
+                Y: =100
+                ZIndex: =2
+
+            Radio1_34 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =239
+                ZIndex: =3
+
+            Label2_35 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q34. Does the service allow for a segregation of duty in line with the organization's delegations of authority?"
+                Width: =600
+                X: =21
+                Y: =329
+                ZIndex: =4
+
+            Radio1_35 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =82
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                OnChange: =true    
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =461
+                ZIndex: =5
+
+            Label2_36 As label:
+                DisplayMode: =DisplayMode.View
+                Height: =132
+                Size: =21
+                Text: ="Q35. Can the FSP provide reports in the format that meets the organization's requirements? "
+                Width: =600
+                X: =21
+                Y: =554
+                ZIndex: =6
+
+            Radio1_36 As radio:
+                Align: =Align.Center
+                Default: =""
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                LineHeight: =
+                OnChange: =true
+                OnSelect: =
+                PressedColor: |
+                    =Self.Color
+                RadioSize: =60
+                Reset: =true
+                Size: =21
+                Width: =505
+                X: =21
+                Y: =686
+                ZIndex: =7
+
+            Button2_20 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: =Navigate(Screen9, ScreenTransition.Fade)
+                Size: =24
+                Text: ="Previous"
+                Width: =165
+                X: =40
+                Y: =890
+                ZIndex: =10
+
+            Button2_21 As button:
+                Fill: =RGBA(255, 0, 0, 1)
+                Height: =51
+                OnSelect: |-
+                    =If(
+                        !IsBlank(Radio1_34) && !IsBlank(Radio1_35)
+                         && !IsBlank(Radio1_36),
+                        Navigate(
+                            Screen11,
+                            ScreenTransition.Fade
+                        )
+                    )
+                Size: =24
+                Text: ="Next"
+                Width: =171
+                X: =430
+                Y: =890
+                ZIndex: =11
+
+            total_9 As label:
+                BorderColor: =RGBA(255, 0, 0, 1)
+                BorderThickness: =1
+                Color: =RGBA(255, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(241, 244, 249, 1)
+                FocusedBorderThickness: =1
+                Height: =59
+                OnSelect: |
+                    =
+                Size: =21
+                Text: =(If("Yes" in Radio1_34.Selected.Value, 3, 0))+(If("Yes" in Radio1_35.Selected.Value, 3, 0))+(If("Yes" in Radio1_36.Selected.Value, 3, 0))
+                Visible: =false
+                Width: =120
+                X: =256
+                Y: =831
+                ZIndex: =12
+
