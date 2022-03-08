@@ -84,6 +84,7 @@ Screen1 As screen:
         RadioSize: =60
         Reset: =true
         Size: =21
+        Visible: =If (Radio1.Selected.Value = "No", true, DisplayMode.View)
         Width: =505
         X: =20
         Y: =703

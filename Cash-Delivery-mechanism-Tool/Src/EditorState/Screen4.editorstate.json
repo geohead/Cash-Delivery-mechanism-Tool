@@ -3688,6 +3688,14 @@
         "InvariantPropertyName": "OnChange",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
+      },
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "1.2",
+        "InvariantPropertyName": "LineHeight",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
       }
     ],
     "HasDynamicProperties": false,
@@ -3897,6 +3905,11 @@
       {
         "Category": "Design",
         "PropertyName": "RadioSize",
+        "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Design",
+        "PropertyName": "LineHeight",
         "RuleProviderType": "Unknown"
       },
       {
